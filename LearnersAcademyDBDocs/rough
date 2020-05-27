@@ -1,0 +1,86 @@
+SUBJECTS
+pk subject_id
+subject_name
+
+CLASSES
+pk class_id
+class_name
+fk subject_id
+
+TEACHERS
+pk teacher_id
+teacher_name
+fk class_id
+fk subject_id
+
+STUDENTS
+pk student_id
+student_name
+fk class_id
+
+
+DROP TABLE SUBJECTS;
+DROP TABLE CLASSES;
+DROP TABLE TEACHERS;
+DROP TABLE STUDENTS;
+
+
+CREATE TABLE SUBJECTS
+( subject_id number(10) NOT NULL,
+  subject_name varchar2(50) NOT NULL,
+  CONSTRAINT subject_id_pk PRIMARY KEY (subject_id),
+);
+
+CREATE TABLE CLASSES
+( class_id number(10) NOT NULL,
+  class_name varchar2(50) NOT NULL,
+  subject_id number(10),
+  CONSTRAINT class_id_pk PRIMARY KEY (class_id),
+  CONSTRAINT fk_subjects
+    FOREIGN KEY (subject_id)
+    REFERENCES SUBJECTS(subject_id)
+);
+
+CREATE TABLE TEACHERS
+( teacher_id number(10) NOT NULL,
+  teacher_name varchar2(50) NOT NULL,
+  class_id number(10),
+  subject_id number(10),
+  CONSTRAINT teacher_id_pk PRIMARY KEY (teacher_id),
+  CONSTRAINT fk_classes
+    FOREIGN KEY (class_id)
+    REFERENCES SUBJECTS(class_id),
+  CONSTRAINT fk_subjects
+    FOREIGN KEY (subject_id)
+    REFERENCES SUBJECTS(subject_id)
+);
+
+CREATE TABLE STUDENTS
+( student_id number(10) NOT NULL,
+  student_name varchar2(50) NOT NULL,
+  class_id number(10),
+  CONSTRAINT class_id_pk PRIMARY KEY (class_id),
+  CONSTRAINT fk_classes
+    FOREIGN KEY (class_id)
+    REFERENCES SUBJECTS(class_id)
+);
+
+subject
+we check for every subject is assigned to a class
+we check that the same subject has been already assigned to a class
+while inserting we get fresh subject id from database instead of webpage as 
+simulateous admins would be accesing the portal
+display class names instead of class id to make it easier for the admin to identify the class
+
+teacher
+we check for every teacher is assigned a class and a subject
+we check whether the same teachers, same class and same subject is not assigned again.
+while inserting we get fresh teacher id from database instead of webpage as 
+simulateous admins would be accesing the portal
+Gender should be M or F
+display class names instead of class id to make it easier for the admin to identify the class
+display subject names instead of subject id to make it easier for the admin to identify the subject
+
+class
+valid classname should be between Class 1 to Class 12
+Already all the classes are loaded in the database, so to add a new class you have to first delete an existing class

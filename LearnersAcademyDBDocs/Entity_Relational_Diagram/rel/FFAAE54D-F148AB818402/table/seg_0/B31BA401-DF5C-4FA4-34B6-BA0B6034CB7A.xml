@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B31BA401-DF5C-4FA4-34B6-BA0B6034CB7A" schemaObject="266F69BE-0D35-A246-8BBF-669546F8E7D1" name="TEACHERS">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>TEACHERS</sourceObjName>
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TEACHER_ID" id="2BEEDD7B-3D74-D1CE-CC9E-17517FC81C1B">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>TEACHER_ID</sourceObjName>
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEACHER_NAME" id="EFBAA0C8-35A5-5681-77DE-C7B038752DD8">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>TEACHER_NAME</sourceObjName>
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLASS_ID" id="79DA0D08-3563-9BDE-C718-DA1C152F28DA">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>CLASS_ID</sourceObjName>
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5FD3892D-4281-1ACB-5003-A9AD6EA7AD37" referredColumn="910319A7-3C2F-7B49-26AD-9382A5ABACA4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6FDF0E2D-FD51-A520-3A12-A7DC3A160B19" name="TEACHER_ID_PK">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>TEACHER_ID_PK</sourceObjName>
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2BEEDD7B-3D74-D1CE-CC9E-17517FC81C1B"/>
+<colUsage columnID="79DA0D08-3563-9BDE-C718-DA1C152F28DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="65F821E5-498E-0D03-4A96-195357178B2A" schemaObject="266F69BE-0D35-A246-8BBF-669546F8E7D1" name="TEACHER_ID_PK">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>TEACHER_ID_PK</sourceObjName>
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2BEEDD7B-3D74-D1CE-CC9E-17517FC81C1B"/>
+<colUsage columnID="79DA0D08-3563-9BDE-C718-DA1C152F28DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C7357E5-CE9F-7211-97F0-CA79855A8281" name="FK_TEACHER_CLASSES">
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79DA0D08-3563-9BDE-C718-DA1C152F28DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

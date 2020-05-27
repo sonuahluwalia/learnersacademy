@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CLASSES" directorySegmentName="seg_0" id="86C00F79-2AE0-C168-6883-424611A2B5B4">
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<schemaObject>266F69BE-0D35-A246-8BBF-669546F8E7D1</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>9D56EDFB-6263-F286-0EB2-05B693BD33E4</segment>
+<tableSpace>FA07AEAD-34E5-1311-A0E5-EE3074F5F62A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CLASS_NAME" id="614D21C7-965F-0C74-21AA-7051BA764146">
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CLASS_ID" id="910319A7-3C2F-7B49-26AD-9382A5ABACA4">
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CLASSES_PK" id="C52C07A9-2A8B-A292-275E-89248E125029">
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<schemaObject>266F69BE-0D35-A246-8BBF-669546F8E7D1</schemaObject>
+<segment>70CFC2B5-CE49-AEC9-B803-214C5ADBA6B6</segment>
+<tableSpace>FA07AEAD-34E5-1311-A0E5-EE3074F5F62A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CLASSES_PK" id="463C5EFD-918E-4216-9D24-798681A289A2">
+<createdBy>oracle</createdBy>
+<createdTime>2020-05-21 16:03:01 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<segment>70CFC2B5-CE49-AEC9-B803-214C5ADBA6B6</segment>
+<tableSpace>FA07AEAD-34E5-1311-A0E5-EE3074F5F62A</tableSpace>
+<existingIndex>C52C07A9-2A8B-A292-275E-89248E125029</existingIndex>
+<indexSegment>70CFC2B5-CE49-AEC9-B803-214C5ADBA6B6</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>
