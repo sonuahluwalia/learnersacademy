@@ -11,7 +11,7 @@ public interface SubjectBO {
 	public HashMap<String, ArrayList<?>> getAllSubjects() throws BusinessException, DAOException;
 	public int getNextSubjectId() throws BusinessException, DAOException ;
 	public int insertSubject(Map<String, String[]> map) throws BusinessException, DAOException;
-	public int delete(int subject_id) throws DAOException, BusinessException;
-	int update(Map<String, String[]> map) throws DAOException, BusinessException;
+	public int deleteSubject(int subject_id) throws DAOException, BusinessException;
+	int updateSubject(Map<String, String[]> map) throws DAOException, BusinessException;
 	
 }

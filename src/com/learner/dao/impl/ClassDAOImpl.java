@@ -38,7 +38,7 @@ public class ClassDAOImpl implements ClassDAO {
 				if (rs.next()) {
 					class_id = rs.getInt(1);
 				}
-				System.out.println("DB Class id: " + class_id);
+				//System.out.println("DB Class id: " + class_id);
 			}
 
 			return class_id;
@@ -111,7 +111,7 @@ public class ClassDAOImpl implements ClassDAO {
 		HashMap<String, ArrayList<?>> map = new HashMap<>();
 
 		Connection connection = DBConnection.getConnection();
-		System.out.println("Connection successful");
+		//System.out.println("Connection successful");
 
 		String sql = "select class_id, class_name from classes ";
 		
@@ -134,10 +134,10 @@ public class ClassDAOImpl implements ClassDAO {
 	}
 
 	
-	public int delete(int class_id) throws DAOException{
+	public int deleteClass(int class_id) throws DAOException{
 		Connection connection = DBConnection.getConnection();
 		String sql = "delete from classes where class_id = ? ";
-		System.out.println("In Delete classdaoimpl: "+class_id);
+		//System.out.println("In Delete classdaoimpl: "+class_id);
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);

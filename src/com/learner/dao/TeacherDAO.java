@@ -25,7 +25,7 @@ public interface TeacherDAO {
 
 	boolean checkIfTeacherClassSubjectExists(Map<String, String> map) throws DAOException;
 
-	int delete(int teacher_id) throws DAOException;
+	int deleteTeacher(int teacher_id) throws DAOException;
 
 	int updateTeacher(Map<String, String> map) throws DAOException;
 }

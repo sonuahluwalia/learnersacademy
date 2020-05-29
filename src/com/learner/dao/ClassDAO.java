@@ -21,7 +21,7 @@ public interface ClassDAO {
 
 	HashMap<String, ArrayList<?>> getAllClasses() throws DAOException, BusinessException;
 
-	int delete(int class_id) throws DAOException;
+	int deleteClass(int class_id) throws DAOException;
 
 	int insertClass(Map<String, String> map) throws DAOException;
 

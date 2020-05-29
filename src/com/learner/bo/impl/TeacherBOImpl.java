@@ -16,6 +16,7 @@ import com.learner.exception.DAOException;
 
 public class TeacherBOImpl implements TeacherBO {
 
+	@Override
 	public HashMap<String, ArrayList<?>> getAllTeachers() throws BusinessException, DAOException {
 		TeacherDAO teacherdao = new TeacherDAOImpl();
 		HashMap<String, ArrayList<?>> map = teacherdao.getAllTeachers();
@@ -68,9 +69,9 @@ public class TeacherBOImpl implements TeacherBO {
 	}
 
 	@Override
-	public int delete(int teacher_id) throws DAOException {
+	public int deleteTeacher(int teacher_id) throws DAOException {
 		TeacherDAO teacherdao = new TeacherDAOImpl();
-		return teacherdao.delete(teacher_id);
+		return teacherdao.deleteTeacher(teacher_id);
 	}
 
 	@Override

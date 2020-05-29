@@ -33,7 +33,7 @@ public class SubjectDAOImpl implements SubjectDAO {
 		HashMap<String, ArrayList<?>> map = new HashMap<>();
 
 		Connection connection = DBConnection.getConnection();
-		System.out.println("Connectioin successful");
+		//System.out.println("Connectioin successful");
 
 		String sql = "select s.subject_id, s.subject_name, c.class_name,  " + "s.class_id \n" + "from subjects s\n"
 				+ "left join classes c on s.class_id = c.class_id\n" + "\n" + "";
@@ -104,7 +104,7 @@ public class SubjectDAOImpl implements SubjectDAO {
 	}
 
 	@Override
-	public int delete(int subject_id) throws DAOException {
+	public int deleteSubject(int subject_id) throws DAOException {
 		Connection connection = DBConnection.getConnection();
 		String sql = "delete from subjects where subject_id=?";
 
@@ -148,7 +148,7 @@ public class SubjectDAOImpl implements SubjectDAO {
 	}
 
 	@Override
-	public int update(String[] parameters) throws DAOException {
+	public int updateSubject(String[] parameters) throws DAOException {
 		
 		ClassDAO classdao = new ClassDAOImpl();
 		int class_id = 0;
@@ -173,6 +173,8 @@ public class SubjectDAOImpl implements SubjectDAO {
 
 		} catch (SQLException e) {
 			throw new DAOException(ExceptionHandler.printExceptionDetails(e));
+		} catch (NumberFormatException e) {
+			throw new DAOException("Invalid Input");
 		}
 	}
 
@@ -215,7 +217,7 @@ public class SubjectDAOImpl implements SubjectDAO {
 				if (rs.next()) {
 					subject_id = rs.getInt(1);
 				}
-				System.out.println("DB Subject id: " + subject_id);
+				//System.out.println("DB Subject id: " + subject_id);
 			}
 
 			return subject_id;

@@ -49,17 +49,28 @@ public class TeacherController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		if (request.getParameter("action") == null) {
-			response.sendRedirect("main.jsp");
-		} else if (request.getParameter("action").equals("display")) {
-			doDisplay(request, response);
-		} else if (request.getParameter("action").equals("insert")) {
-			doInsert(request, response);
-		} else if (request.getParameter("action").equals("delete")) {
-			doDelete(request, response);
-		} else if (request.getParameter("action").equals("update")) {
-			doUpdate(request, response);
+
+		String login = ((String) request.getSession(false).getAttribute("login"));
+		if (request.getParameter("logout") != null) {
+			request.getSession(false).invalidate();
+			response.sendRedirect("login.jsp");
+		} else if (login != null && login.equals("true")) {
+
+			if (request.getParameter("action") == null) {
+				response.sendRedirect("login.jsp");
+			} else if (request.getParameter("action").equals("display")) {
+				doDisplay(request, response);
+			} else if (request.getParameter("action").equals("insert")) {
+				doInsert(request, response);
+			} else if (request.getParameter("action").equals("delete")) {
+				doDelete(request, response);
+			} else if (request.getParameter("action").equals("update")) {
+				doUpdate(request, response);
+			}
+		} else {
+			response.sendRedirect("login.jsp");
 		}
+
 	}
 
 	public void doUpdate(HttpServletRequest request, HttpServletResponse response)
@@ -78,7 +89,7 @@ public class TeacherController extends HttpServlet {
 
 		try {
 			int result = teacherbo.updateTeacher(map);
-			//request.setAttribute("exception_logic", "Result: "+result);
+			// request.setAttribute("exception_logic", "Result: "+result);
 
 			if (result == 1) {
 				request.setAttribute("success_update",
@@ -105,7 +116,7 @@ public class TeacherController extends HttpServlet {
 		TeacherBO teacherbo = new TeacherBOImpl();
 		String teacher_id = request.getParameter("teacherid");
 		try {
-			int result = teacherbo.delete(Integer.parseInt(teacher_id));
+			int result = teacherbo.deleteTeacher(Integer.parseInt(teacher_id));
 
 			if (result == 1) {
 				request.setAttribute("success_delete", "Deleted Teacher with id: " + teacher_id);
@@ -197,7 +208,6 @@ public class TeacherController extends HttpServlet {
 
 			}
 		}
-
 	}
 
 }

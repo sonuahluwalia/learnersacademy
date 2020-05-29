@@ -35,7 +35,7 @@ public class TeacherDAOImpl implements TeacherDAO {
 		HashMap<String, ArrayList<?>> map = new HashMap<>();
 
 		Connection connection = DBConnection.getConnection();
-		System.out.println("Connectioin successful");
+		//System.out.println("Connection successful");
 
 		String sql = "select t.teacher_id, t.teacher_name, t.class_id, t.qualification, "
 				+ " t.experience_years, t.age, t.gender, t.subject_id, t.class_id, c.class_name, "
@@ -86,7 +86,7 @@ public class TeacherDAOImpl implements TeacherDAO {
 				if (rs.next()) {
 					teacher_id = rs.getInt(1);
 				}
-				System.out.println("DB Teacher id: " + teacher_id);
+				//System.out.println("DB Teacher id: " + teacher_id);
 			}
 
 			return teacher_id;
@@ -136,7 +136,6 @@ public class TeacherDAOImpl implements TeacherDAO {
 			throw new DAOException(ExceptionHandler.printExceptionDetails(e));
 		}
 
-
 	}
 
 	@Override
@@ -149,11 +148,11 @@ public class TeacherDAOImpl implements TeacherDAO {
 		int	class_id = classdao.getClassIdFromClassName(map.get("classname"));
 		int subject_id = subjectdao.getSubjectIdFromSubjectName(map.get("subjectname"));
 		
-		String sqlTeacherInsert = "INSERT INTO teachers(teacher_id, teacher_name, class_id, subject_id, "
+		String sql = "INSERT INTO teachers(teacher_id, teacher_name, class_id, subject_id, "
 				+ " qualification, experience_years, age, gender) " + " VALUES (?, ?, ?, ?, ?, ?, ?, ? ) ";
 		PreparedStatement stmt3;
 		try {
-			stmt3 = connection.prepareStatement(sqlTeacherInsert);
+			stmt3 = connection.prepareStatement(sql);
 			stmt3.setInt(1, teacherdao.getNextTeacherId());
 			stmt3.setString(2, map.get("teachername"));
 			stmt3.setInt(3, class_id);
@@ -176,12 +175,12 @@ public class TeacherDAOImpl implements TeacherDAO {
 
 	public boolean insertExistingTeacherNewClass(int teacher_id, int class_id, String teachername) throws DAOException {
 		if (checkTeacherIdClassIdExists(teacher_id, class_id)) {
-			System.out.println("Teacher : " + teacher_id + " " + class_id + " exists");
+			//System.out.println("Teacher : " + teacher_id + " " + class_id + " exists");
 			throw new DAOException("Teacher already teaches this class");
 		} else {
-			System.out.println("DB Teacherid: " + class_id);
+			//System.out.println("DB Teacherid: " + class_id);
 		//	insertTeacher(teacher_id, teachername, class_id);
-			System.out.println("Existing Teacher with new class inserted");
+			//System.out.println("Existing Teacher with new class inserted");
 			return true;
 		}
 
@@ -239,7 +238,7 @@ public class TeacherDAOImpl implements TeacherDAO {
 	}
 
 	@Override
-	public int delete(int teacher_id) throws DAOException{
+	public int deleteTeacher(int teacher_id) throws DAOException{
 		Connection connection = DBConnection.getConnection();
 		String sql = "delete from teachers where teacher_id=?";
 
@@ -278,8 +277,8 @@ public class TeacherDAOImpl implements TeacherDAO {
 			stmt.setInt(2, class_id);
 			stmt.setInt(3, subject_id);
 			stmt.setString(4, map.get("qualification"));
-			stmt.setString(5, map.get("experience_years"));
-			stmt.setString(6, map.get("age"));
+			stmt.setInt(5, Integer.parseInt(map.get("experience_years")));
+			stmt.setInt(6, Integer.parseInt(map.get("age")));
 			stmt.setString(7, map.get("gender"));
 			stmt.setInt(8, Integer.parseInt(map.get("teacherid")));
 			
@@ -291,6 +290,8 @@ public class TeacherDAOImpl implements TeacherDAO {
 
 		} catch (SQLException e) {
 			throw new DAOException(ExceptionHandler.printExceptionDetails(e));
+		} catch (NumberFormatException e) {
+			throw new DAOException("Invalid Input");
 		}
 	}
 

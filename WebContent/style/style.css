@@ -1,57 +1,11 @@
 @charset "UTF-8";
-t/* able.subjects td {
-    background-color: lime;
-    margin: 12px 12px 12px 12px;
-    padding: 12px 12px 12px 12px;
-}
-
-table.subjects th {
-	background-color: rgb(192,192,192);
-} 
-table.subjects {
-    border-collapse: separate;
-    border-spacing: 10px;
-    *border-collapse: expression('separate', cellSpacing = '10px');
-    
-}
- */
-/* 
-#table-wrapper {
-  position:relative;
-}
-#table-scroll {
-  height:300px;
-  overflow:auto;  
-  margin-top:20px;
-}
-
-#table-wrapper table {
-  width:100%;
-}
-
-#table-wrapper table * {
-  background:rgb(192,192,192);
-  color:black;
-}
-#table-wrapper table thead th .text {
-  position:relative;   
-  top:20px;
-  z-index:2; 
-  height:20px;
-  width:35%;
-  left: 0;
-  border:1px solid black;
-}
- */
 
 
 .wrap {
-    /* width: 352px; */
     width: 100%;
 }
 
 .wrap table {
-    /* width: 300px; */
     width: 100%;
     table-layout: fixed;
     
@@ -70,40 +24,11 @@ table.head tr td {
 }
 
 .inner_table {
-    /* height: 100px; */
     height: 200px;
     overflow-y: auto;
 	    
 }
 
-
-#addsubject-wrap {
-	text-align: center;
-}
-
-div.addsubject {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 50%;
-  /* position: absolute;
-  left: 25%; */
-  display: inline-block;
-}
-
-div.addsubject input[type=text]{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-#addsubject-form {
-	text-align: left;
-}
 
 span.error {
 	color: red;
@@ -111,4 +36,6 @@ span.error {
 span.success {
 	color: green;
 }
+
+
 

@@ -15,8 +15,8 @@ import com.learner.exception.DAOException;
 public class ClassBOImpl implements ClassBO {
 
 	public boolean checkClassname(String value) {
-		return true;
-		//return value.matches("Class\\s[1-9]|1[012]");
+		//return true;
+		return value.matches("Class\\s[1-9]|1[012]");
 	}
 
 	@Override
@@ -43,9 +43,9 @@ public class ClassBOImpl implements ClassBO {
 		}
 	}
 
-	public int delete(int class_id) throws DAOException {
+	public int deleteClass(int class_id) throws DAOException {
 		ClassDAO classdao = new ClassDAOImpl();
-		return classdao.delete(class_id);
+		return classdao.deleteClass(class_id);
 	}
 
 	@Override

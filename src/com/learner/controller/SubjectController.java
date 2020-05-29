@@ -31,7 +31,7 @@ public class SubjectController extends HttpServlet {
 	 */
 	public SubjectController() {
 		super();
-		
+
 	}
 
 	/**
@@ -40,19 +40,29 @@ public class SubjectController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String login = ((String) request.getSession(false).getAttribute("login"));
+		if (request.getParameter("logout") != null) {
+		 	 request.getSession(false).invalidate();
+		 	response.sendRedirect("login.jsp");
+		} else if (login != null && login.equals("true")) {
 
-		if (request.getParameter("action") == null) {
-			response.sendRedirect("main.jsp");
-		} else if (request.getParameter("action").equals("display")) {
-			doDisplay(request, response);
-		} else if (request.getParameter("action").equals("insert")) {
-			doInsert(request, response);
-		} else if (request.getParameter("action").equals("delete")) {
-			doDelete(request, response);
-		} else if (request.getParameter("action").equals("update")) {
-			doUpdate(request, response);
+			if (request.getParameter("action") == null) {
+				response.sendRedirect("login.jsp");
+			} else if (request.getParameter("action").equals("display")) {
+				doDisplay(request, response);
+			} else if (request.getParameter("action").equals("insert")) {
+				doInsert(request, response);
+			} else if (request.getParameter("action").equals("delete")) {
+				doDelete(request, response);
+			} else if (request.getParameter("action").equals("update")) {
+				doUpdate(request, response);
+			}
+
 		}
 
+		else {
+			response.sendRedirect("login.jsp");
+		}
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -105,7 +115,7 @@ public class SubjectController extends HttpServlet {
 			try {
 				request.setAttribute("next_subject_id", subjectbo.getNextSubjectId());
 			} catch (BusinessException | DAOException e1) {
-				
+
 				request.setAttribute("exception_next_subject_id", e.getMessage());
 				doDisplay(request, response);
 
@@ -119,7 +129,7 @@ public class SubjectController extends HttpServlet {
 		SubjectBO subjectbo = new SubjectBOImpl();
 		String subject_id = request.getParameter("subject_id");
 		try {
-			int result = subjectbo.delete(Integer.parseInt(subject_id));
+			int result = subjectbo.deleteSubject(Integer.parseInt(subject_id));
 
 			if (result == 1) {
 				request.setAttribute("success_delete", "Deleted Subject with id: " + subject_id);
@@ -130,12 +140,12 @@ public class SubjectController extends HttpServlet {
 		} catch (NumberFormatException e) {
 			request.setAttribute("subject_id_error", "Subject Id should be a number");
 			doDisplay(request, response);
-			
+
 		} catch (DAOException | BusinessException e) {
 			request.setAttribute("exception_delete", e.getMessage());
 			doDisplay(request, response);
-			
-		} 
+
+		}
 	}
 
 	public void doUpdate(HttpServletRequest request, HttpServletResponse response)
@@ -144,7 +154,7 @@ public class SubjectController extends HttpServlet {
 		SubjectBO subjectbo = new SubjectBOImpl();
 		Map<String, String[]> map = request.getParameterMap();
 		try {
-			int result = subjectbo.update(map);
+			int result = subjectbo.updateSubject(map);
 
 			if (result == 1) {
 				request.setAttribute("success_update",
@@ -158,7 +168,7 @@ public class SubjectController extends HttpServlet {
 
 			doDisplay(request, response);
 		} catch (BusinessException | DAOException e) {
-			
+
 			request.setAttribute("exception_update", e.getMessage());
 			doDisplay(request, response);
 		}

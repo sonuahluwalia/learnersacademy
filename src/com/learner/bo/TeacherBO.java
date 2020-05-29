@@ -15,7 +15,7 @@ public interface TeacherBO {
 
 	int getNextTeacherId() throws DAOException, BusinessException;
 
-	int delete(int teacher_id) throws DAOException;
+	int deleteTeacher(int teacher_id) throws DAOException;
 
 	int updateTeacher(Map<String, String> map) throws BusinessException, DAOException;
 	

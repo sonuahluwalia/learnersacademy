@@ -71,19 +71,15 @@ public class SubjectBOImpl implements SubjectBO {
 			Map.Entry<String, String[]> entry = (Map.Entry<String, String[]>) it.next();
 			String key = entry.getKey();
 			String[] value = entry.getValue();
-			System.out.println("Loop: " + ++count + " key: " + key + " ->>>  " + " value: " + value[0]);
-
+ 
 			if (key.equals("subjectid")) {
-				System.out.println("Subject Id: " + value[0]);
-				subjectid = value[0];
+ 				subjectid = value[0];
 			}
 			if (key.equals("subjectname")) {
-				System.out.println("Subject Name: " + value[0]);
-				subjectname = value[0];
+ 				subjectname = value[0];
 			}
 			if (key.equals("classname")) {
-				System.out.println("Class Name: " + value[0]);
-
+ 
 				if (value[0] == null || value[0].isEmpty()) {
 
 					throw new BusinessException("class name value cannot be empty");
@@ -98,15 +94,15 @@ public class SubjectBOImpl implements SubjectBO {
 
 
 	@Override
-	public int delete(int subject_id) throws BusinessException, DAOException {
+	public int deleteSubject(int subject_id) throws BusinessException, DAOException {
 		
 		SubjectDAO subjectdao = new SubjectDAOImpl();
-		return subjectdao.delete(subject_id);
+		return subjectdao.deleteSubject(subject_id);
 
 	}
 
 	@Override
-	public int update(Map<String, String[]> map) throws BusinessException, DAOException {
+	public int updateSubject(Map<String, String[]> map) throws BusinessException, DAOException {
 		
 		SubjectDAO subjectdao = new SubjectDAOImpl();
 		String[] parameters = setParamenters(map);
@@ -115,7 +111,7 @@ public class SubjectBOImpl implements SubjectBO {
 			if (checkIfSubjectClassExists(parameters)) {
 				throw new BusinessException("Subject is already added to the class");
 			}
-			subjectdao.update(parameters);
+			subjectdao.updateSubject(parameters);
 		} else {
 			throw new BusinessException("Class name should be: Class 1 - Class 12");
 		}

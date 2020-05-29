@@ -14,7 +14,7 @@ public interface ClassBO {
 
 	public int getNextClassId() throws DAOException, BusinessException;
 	
-	public int delete(int class_id) throws DAOException;
+	public int deleteClass(int class_id) throws DAOException;
 
 	int insertClass(Map<String, String> map) throws BusinessException, DAOException;
 

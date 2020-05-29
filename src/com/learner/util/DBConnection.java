@@ -22,8 +22,8 @@ public class DBConnection {
 		try {
 			String username = "learner";
 			String password = "learner";
-			String dbServiceName = "orcl";
-
+			String dbServiceName = "";
+			String dbDatabaseName = "orcl1";
 			
 			OracleDataSource ods = null;
 //			Connection connection = null;
@@ -34,7 +34,13 @@ public class DBConnection {
 			ods.setServerName("localhost"); // database server name
 			ods.setNetworkProtocol("tcp"); // tcp is the default anyway
 			//ods.setDatabaseName(dbServiceName); // Oracle SID
-			ods.setServiceName(dbServiceName);
+			if (!dbServiceName.isEmpty()) {
+				ods.setServiceName(dbServiceName);				
+			}
+			if (!dbDatabaseName.isEmpty()) {
+				ods.setDatabaseName(dbDatabaseName); // Oracle SID				
+			}
+			
 			if ("ora92".equals(dbServiceName)) {
 				ods.setPortNumber(1522);
 			} else {
