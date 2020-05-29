@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="TEACHERS" directorySegmentName="seg_0" id="CD6529D1-85A5-9E70-EBD4-84010F89F250">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:45 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<schemaObject>09DE0B1C-F851-01D7-4E4F-59D1EF36B02D</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>6E2102C5-CB76-D6AE-F2CC-540DD738F6BA</segment>
+<tableSpace>0D52398D-3F54-54F1-3B50-0E7CE82EDB94</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TEACHER_ID" id="2202D504-85E9-AA4A-4F88-71145F385E39">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EXPERIENCE_YEARS" id="28EFCD46-0171-B1E9-86A2-D108144E7621">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="GENDER" id="48C4D6D0-CBF6-495E-2D8E-B53151E5C166">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AGE" id="B390D33D-B8EF-A266-041C-EAB16F63318A">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="QUALIFICATION" id="C6507DEB-A409-5B2F-4744-827BD315D442">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TEACHER_NAME" id="CAB4C6E2-012A-C558-7440-4670B05D4A4A">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SUBJECT_ID" id="E51E7832-309F-223F-2673-B079FA573A23">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CLASS_ID" id="EDC628BB-D465-5532-2C34-22AB5613E1B3">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TEACHER_ID_PK" id="E648E22D-4AA9-571C-8804-A2EE6DF73CD5">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:48 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<schemaObject>09DE0B1C-F851-01D7-4E4F-59D1EF36B02D</schemaObject>
+<segment>06BFF37E-8610-7A04-BAD8-9F1F84F1295C</segment>
+<tableSpace>0D52398D-3F54-54F1-3B50-0E7CE82EDB94</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_TEACHER_CLASSES" id="F7269CD9-E675-84CD-2B86-1398C214CCC8">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:53 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TEACHER_ID_PK" id="D7808BA2-E8E6-0F4B-3615-02EC883CE478">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:52 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<segment>06BFF37E-8610-7A04-BAD8-9F1F84F1295C</segment>
+<tableSpace>0D52398D-3F54-54F1-3B50-0E7CE82EDB94</tableSpace>
+<existingIndex>E648E22D-4AA9-571C-8804-A2EE6DF73CD5</existingIndex>
+<indexSegment>06BFF37E-8610-7A04-BAD8-9F1F84F1295C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9B13F6BC-FFE7-C03F-16F4-6FAA9A049C18" schemaObject="09DE0B1C-F851-01D7-4E4F-59D1EF36B02D" name="SUBJECTS">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>SUBJECTS</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:45 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SUBJECT_ID" id="FB2052B8-03EE-154F-0A10-0417F8F37396">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>SUBJECTS</sourceObjSchema>
+<sourceObjName>SUBJECT_ID</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUBJECT_NAME" id="FB13A1BF-59CF-836E-B50F-36B860474340">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>SUBJECTS</sourceObjSchema>
+<sourceObjName>SUBJECT_NAME</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLASS_ID" id="33932A39-C693-EF5C-3DAC-CD3FC5103DF0">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>SUBJECTS</sourceObjSchema>
+<sourceObjName>CLASS_ID</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="67AE4B66-01C0-1688-A25D-4F256664F589" referredColumn="BE4E3D89-E6C4-69CF-E83E-206AA3738433"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A22A46B-7B36-3DA9-1086-511E62FAC923" name="SUBJECT_ID_PK">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>SUBJECT_ID_PK</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:52 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB2052B8-03EE-154F-0A10-0417F8F37396"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4C03A1D9-4DD2-1C49-D920-BE94B5728297" schemaObject="09DE0B1C-F851-01D7-4E4F-59D1EF36B02D" name="SUBJECT_ID_PK">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>SUBJECT_ID_PK</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:48 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB2052B8-03EE-154F-0A10-0417F8F37396"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="137FFAD1-DBCB-BFAA-E253-8627405AD0A2" name="FK_SUBJECTS_CLASSES">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:53 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33932A39-C693-EF5C-3DAC-CD3FC5103DF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

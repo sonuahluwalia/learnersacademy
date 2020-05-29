@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8751FFAE-1E68-CFFF-E967-53B1CF900BCB" schemaObject="09DE0B1C-F851-01D7-4E4F-59D1EF36B02D" name="CLASSES">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>CLASSES</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:41 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CLASS_ID" id="BE4E3D89-E6C4-69CF-E83E-206AA3738433">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>CLASSES</sourceObjSchema>
+<sourceObjName>CLASS_ID</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLASS_NAME" id="FD6E59F8-9ECA-B718-8042-60BB56FA5F9F">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>CLASSES</sourceObjSchema>
+<sourceObjName>CLASS_NAME</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F252D214-2FD2-7551-1614-4CD963F5ACD1" name="CLASSES_PK">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>CLASSES_PK</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:51 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE4E3D89-E6C4-69CF-E83E-206AA3738433"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2012280C-4D27-0B46-F607-FB95FEDAA5D5" schemaObject="09DE0B1C-F851-01D7-4E4F-59D1EF36B02D" name="CLASSES_PK">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>CLASSES_PK</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:47 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE4E3D89-E6C4-69CF-E83E-206AA3738433"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

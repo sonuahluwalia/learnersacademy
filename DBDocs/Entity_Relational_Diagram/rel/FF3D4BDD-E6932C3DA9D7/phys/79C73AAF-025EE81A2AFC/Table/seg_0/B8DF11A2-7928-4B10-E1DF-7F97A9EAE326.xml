@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="LOGIN" directorySegmentName="seg_0" id="B8DF11A2-7928-4B10-E1DF-7F97A9EAE326">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:45 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<schemaObject>09DE0B1C-F851-01D7-4E4F-59D1EF36B02D</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>6E2102C5-CB76-D6AE-F2CC-540DD738F6BA</segment>
+<tableSpace>0D52398D-3F54-54F1-3B50-0E7CE82EDB94</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="USERNAME" id="2B33DCEE-53C4-62C6-D908-D93A4ED9E80E">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PASSWORD" id="6E29B146-71D2-349C-45DF-E5BBB4357D23">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev12c>

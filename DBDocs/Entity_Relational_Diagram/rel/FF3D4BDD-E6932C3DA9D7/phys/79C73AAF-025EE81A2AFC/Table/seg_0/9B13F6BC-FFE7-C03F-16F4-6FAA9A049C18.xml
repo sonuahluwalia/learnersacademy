@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="SUBJECTS" directorySegmentName="seg_0" id="9B13F6BC-FFE7-C03F-16F4-6FAA9A049C18">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:45 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<schemaObject>09DE0B1C-F851-01D7-4E4F-59D1EF36B02D</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>6E2102C5-CB76-D6AE-F2CC-540DD738F6BA</segment>
+<tableSpace>0D52398D-3F54-54F1-3B50-0E7CE82EDB94</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CLASS_ID" id="33932A39-C693-EF5C-3DAC-CD3FC5103DF0">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SUBJECT_NAME" id="FB13A1BF-59CF-836E-B50F-36B860474340">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SUBJECT_ID" id="FB2052B8-03EE-154F-0A10-0417F8F37396">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="SUBJECT_ID_PK" id="4C03A1D9-4DD2-1C49-D920-BE94B5728297">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:48 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<schemaObject>09DE0B1C-F851-01D7-4E4F-59D1EF36B02D</schemaObject>
+<segment>06BFF37E-8610-7A04-BAD8-9F1F84F1295C</segment>
+<tableSpace>0D52398D-3F54-54F1-3B50-0E7CE82EDB94</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_SUBJECTS_CLASSES" id="137FFAD1-DBCB-BFAA-E253-8627405AD0A2">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:53 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="SUBJECT_ID_PK" id="4A22A46B-7B36-3DA9-1086-511E62FAC923">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:52 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<segment>06BFF37E-8610-7A04-BAD8-9F1F84F1295C</segment>
+<tableSpace>0D52398D-3F54-54F1-3B50-0E7CE82EDB94</tableSpace>
+<existingIndex>4C03A1D9-4DD2-1C49-D920-BE94B5728297</existingIndex>
+<indexSegment>06BFF37E-8610-7A04-BAD8-9F1F84F1295C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

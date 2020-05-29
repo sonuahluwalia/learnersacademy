@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Entity_Relational_Diagram" id="43ADB78C-E8EC-CF95-756A-56C55E1572DD" version="3.5">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 07:59:09 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>43ADB78C-E8EC-CF95-756A-56C55E1572DD</designId>
+</OSDM_Design>

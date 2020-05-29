@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CLASSES" directorySegmentName="seg_0" id="8751FFAE-1E68-CFFF-E967-53B1CF900BCB">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:43 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<schemaObject>09DE0B1C-F851-01D7-4E4F-59D1EF36B02D</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>6E2102C5-CB76-D6AE-F2CC-540DD738F6BA</segment>
+<tableSpace>0D52398D-3F54-54F1-3B50-0E7CE82EDB94</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CLASS_ID" id="BE4E3D89-E6C4-69CF-E83E-206AA3738433">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CLASS_NAME" id="FD6E59F8-9ECA-B718-8042-60BB56FA5F9F">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CLASSES_PK" id="2012280C-4D27-0B46-F607-FB95FEDAA5D5">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:47 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<schemaObject>09DE0B1C-F851-01D7-4E4F-59D1EF36B02D</schemaObject>
+<segment>06BFF37E-8610-7A04-BAD8-9F1F84F1295C</segment>
+<tableSpace>0D52398D-3F54-54F1-3B50-0E7CE82EDB94</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CLASSES_PK" id="F252D214-2FD2-7551-1614-4CD963F5ACD1">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:51 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<segment>06BFF37E-8610-7A04-BAD8-9F1F84F1295C</segment>
+<tableSpace>0D52398D-3F54-54F1-3B50-0E7CE82EDB94</tableSpace>
+<existingIndex>2012280C-4D27-0B46-F607-FB95FEDAA5D5</existingIndex>
+<indexSegment>06BFF37E-8610-7A04-BAD8-9F1F84F1295C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

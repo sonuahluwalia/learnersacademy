@@ -1,0 +1,179 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CD6529D1-85A5-9E70-EBD4-84010F89F250" schemaObject="09DE0B1C-F851-01D7-4E4F-59D1EF36B02D" name="TEACHERS">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>TEACHERS</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:45 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TEACHER_ID" id="2202D504-85E9-AA4A-4F88-71145F385E39">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>TEACHER_ID</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEACHER_NAME" id="CAB4C6E2-012A-C558-7440-4670B05D4A4A">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>TEACHER_NAME</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLASS_ID" id="EDC628BB-D465-5532-2C34-22AB5613E1B3">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>CLASS_ID</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3AE3B2B1-E92E-FFA6-488A-02D2ACD8AD20" referredColumn="BE4E3D89-E6C4-69CF-E83E-206AA3738433"/>
+</associations>
+</Column>
+<Column name="SUBJECT_ID" id="E51E7832-309F-223F-2673-B079FA573A23">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>SUBJECT_ID</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QUALIFICATION" id="C6507DEB-A409-5B2F-4744-827BD315D442">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>QUALIFICATION</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPERIENCE_YEARS" id="28EFCD46-0171-B1E9-86A2-D108144E7621">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>EXPERIENCE_YEARS</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AGE" id="B390D33D-B8EF-A266-041C-EAB16F63318A">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>AGE</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GENDER" id="48C4D6D0-CBF6-495E-2D8E-B53151E5C166">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>TEACHERS</sourceObjSchema>
+<sourceObjName>GENDER</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:46 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D7808BA2-E8E6-0F4B-3615-02EC883CE478" name="TEACHER_ID_PK">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>TEACHER_ID_PK</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:52 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2202D504-85E9-AA4A-4F88-71145F385E39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E648E22D-4AA9-571C-8804-A2EE6DF73CD5" schemaObject="09DE0B1C-F851-01D7-4E4F-59D1EF36B02D" name="TEACHER_ID_PK">
+<sourceConnName>learner</sourceConnName>
+<sourceObjSchema>LEARNER</sourceObjSchema>
+<sourceObjName>TEACHER_ID_PK</sourceObjName>
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:48 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2202D504-85E9-AA4A-4F88-71145F385E39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F7269CD9-E675-84CD-2B86-1398C214CCC8" name="FK_TEACHER_CLASSES">
+<createdBy>HP</createdBy>
+<createdTime>2020-05-29 08:06:53 UTC</createdTime>
+<ownerDesignName>Entity_Relational_Diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EDC628BB-D465-5532-2C34-22AB5613E1B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
