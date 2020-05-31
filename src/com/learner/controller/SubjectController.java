@@ -155,7 +155,7 @@ public class SubjectController extends HttpServlet {
 		Map<String, String[]> map = request.getParameterMap();
 		try {
 			int result = subjectbo.updateSubject(map);
-
+			System.out.println(result);
 			if (result == 1) {
 				request.setAttribute("success_update",
 						"Subject Name: " + request.getParameter("subjectname") + " Updated");

@@ -23,7 +23,7 @@ public class DBConnection {
 			String username = "learner";
 			String password = "learner";
 			String dbServiceName = "";
-			String dbDatabaseName = "orcl1";
+			String dbDatabaseName = "orcl";
 			
 			OracleDataSource ods = null;
 //			Connection connection = null;

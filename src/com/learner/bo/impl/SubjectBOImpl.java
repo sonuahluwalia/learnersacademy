@@ -111,12 +111,11 @@ public class SubjectBOImpl implements SubjectBO {
 			if (checkIfSubjectClassExists(parameters)) {
 				throw new BusinessException("Subject is already added to the class");
 			}
-			subjectdao.updateSubject(parameters);
+			return subjectdao.updateSubject(parameters);
 		} else {
 			throw new BusinessException("Class name should be: Class 1 - Class 12");
 		}
 
-		return 0;
 	}
 
 }
