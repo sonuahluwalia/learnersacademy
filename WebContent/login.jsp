@@ -12,7 +12,7 @@
 </head>
 <body>
 ,
-<h3>Login Here:</h3>
+<h3>Login Learners Academy</h3>
 	<c:choose>
 		<c:when  test="${sessionScope.login == null}">
 
@@ -20,7 +20,7 @@
 				<span class="error">${error_login}</span><br/>
 				<span class="success">${success_login}</span><br/>	
 				Username: <input type="text" name="username"/><br/>
-				Password: <input type="text" name="password"/><br/>	
+				Password: <input type="password" name="password"/><br/>	
 				<input type="submit"name="login" value="Login"/>
 			</form>
 		</c:when>
